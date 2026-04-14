@@ -275,7 +275,7 @@ p {
 }
 
 
-/* DESPRE */
+/* DESPRE a  */
 
 .despre {
     display: flex;
@@ -348,10 +348,12 @@ p {
         height: 40%;
         background: linear-gradient(to bottom, #344055, transparent);
     }
+}
+
 
 /* ARANJAMENTE */
 
-}
+
 
 .imagetable {
   display: flex;
