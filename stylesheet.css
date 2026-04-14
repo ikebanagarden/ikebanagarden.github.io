@@ -1,6 +1,28 @@
-
+html{
+    scroll-behavior: smooth
+}
 * {
   box-sizing: border-box;
+}
+#backtotop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #1b998b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.2s;
+    z-index: 999;
+}
+
+#backtotop:hover {
+    background-color: #EA526F;
 }
 body {
     margin: 0;
@@ -250,6 +272,85 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+
+/* DESPRE */
+
+.despre {
+    display: flex;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.despre-text {
+    flex: 1;
+    background-color: #344055;
+    color: #fceade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 50px;
+    gap: 20px;
+    z-index: 1;
+}
+
+.despre-text h2 {
+    font-size: 2.5rem;
+    color: #1b998b;
+    margin: 0;
+}
+
+.despre-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.despre-img {
+    flex: 1;
+    position: relative;
+}
+
+.despre-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.despre-img::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, #344055, transparent);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .despre {
+        flex-direction: column;
+    }
+
+    .despre-text {
+        padding: 40px 24px;
+    }
+
+    .despre-img {
+        min-height: 280px;
+    }
+
+    .despre-img::before {
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(to bottom, #344055, transparent);
+    }
+
+/* ARANJAMENTE */
+
 }
 
 .imagetable {
@@ -545,5 +646,56 @@ a{
 
     .container .card:hover .slide.slide2 .content p {
         opacity: 1;
+    }
+}
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px; 
+    }
+
+    #logo {
+        max-width: 160px;
+        min-height: 90px;
+    }
+
+    .navigare {
+        font-size: 2.2rem;
+    }
+
+    .container .card .slide {
+        width: 450px;
+        height: 320px;
+    }
+
+    .container .card .slide.slide1 .icon {
+        width: 450px;
+        height: 320px;
+    }
+
+    .container .card .slide.slide2 .content h3 {
+        font-size: 2rem;
+    }
+
+    .contact-item p {
+        font-size: 1.1rem;
+    }
+
+    .contact-item img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .column img {
+        max-width: 600px;
+        max-height: 900px;
+    }
+
+    .new h1 {
+        font-size: 3.5rem;
+    }
+
+    .ctt {
+        font-size: 1.4rem;
+        padding: 60px;
     }
 }

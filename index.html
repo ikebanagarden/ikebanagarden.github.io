@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
   </head>
+
+<button id="backtotop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
   <body>
 
  <!--Partea de contact-->
@@ -49,7 +52,7 @@
 
         <div class="lista">
          <ul>
-           <li><a href="#">Despre noi</a></li>
+           <li><a href="#despre">Despre noi</a></li>
             <li><a href="#aranjamente">Aranjamente</a></li>
             <li><a href="#workshops">Workshops</a></li>
             <li><a href="#ctt">Tarife/Contact</a></li>
@@ -258,7 +261,27 @@
     
 
     </div>
+    <div class="new">
+
+
+
+    </div>
   
+<div class="despre" id="despre">
+    <div class="despre-text">
+        <h2>Despre Noi</h2>
+        <p>Ikebana Garden Arts este un studio dedicat artei japoneze a aranjamentelor florale,
+            fondrat din pasiunea pentru frumusețea naturii și echilibrul estetic al culturii nipone.
+            Credem că fiecare floare spune o poveste, iar noi te ajutăm să o asculți.</p>
+        <p>Oferim cursuri, workshop-uri și aranjamente personalizate pentru evenimente speciale,
+            aducând armonia și simplitatea ikebana în spațiile voastre.</p>
+    </div>
+    <div class="despre-img">
+        <img src="photos/poza grup.jpeg" alt="Aranjament Ikebana">
+    </div>
+</div>
+
+
     
 
      <div class="new">
@@ -324,6 +347,12 @@
         <p style="color: aliceblue;">+40 738 481 291 </p>
     </div>
 
-
+<script>
+    const btn = document.getElementById('backtotop');
+    window.addEventListener('scroll', () => {
+        btn.style.opacity = window.scrollY > 300 ? '1' : '0';
+        btn.style.pointerEvents = window.scrollY > 300 ? 'auto' : 'none';
+    });
+</script>
   </body>
 </html>     
